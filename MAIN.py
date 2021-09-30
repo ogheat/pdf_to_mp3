@@ -12,12 +12,11 @@ for i in range(0,(len(pdf.pages) - 1)):
     text = page.extract_text()
     if type(text) == str:
         all_text += text
-print(all_text)
 pdf.close()
 
 tts = gTTS(all_text,lang=f"{lang}")
 tts.save('results/result.mp3')
-print("File result.mp3 successful saved to the results folder ")
+print("File result.mp3 successful saved to the result folder ")
 
 
 
